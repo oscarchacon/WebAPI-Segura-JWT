@@ -15,6 +15,7 @@ namespace WebApiSegura.Controllers
     public class AdminController : ApiController
     {
         [HttpGet]
+        [Route("{id:int}")]
         public IHttpActionResult GetId(int id)
         {
             var adminFake = "admin-fake: " + id;
@@ -22,6 +23,7 @@ namespace WebApiSegura.Controllers
         }
 
         [HttpGet]
+        [Route("")]
         public IHttpActionResult GetAll()
         {
             var adminList = new string[] { "admin-1", "admin-2", "admin-3" };

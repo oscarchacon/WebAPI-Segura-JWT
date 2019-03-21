@@ -10,6 +10,7 @@ namespace WebApiSegura.Controllers
     public class CustomersController : ApiController
     {
         [HttpGet]
+        [Route("{id:int}")]
         public IHttpActionResult GetId(int id)
         {
             var customerFake = "customer-fake: " + id;
@@ -17,6 +18,7 @@ namespace WebApiSegura.Controllers
         }
 
         [HttpGet]
+        [Route("")]
         public IHttpActionResult GetAll()
         {
             var customersFake = new string[] { "customer-1", "customer-2", "customer-3" };
